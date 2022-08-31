@@ -69,7 +69,7 @@ namespace RestApiCore
                 });
             });
 
-            // ------------- tuodaan appSettings.jsoniin tekem‰mme AppSettings m‰‰ritys ------------
+            // ------------- tuodaan appSettings.jsoniin tekem√§mme AppSettings m√§√§ritys ------------
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
@@ -99,7 +99,7 @@ namespace RestApiCore
 
             // ------------- Connection string luetaan app setting.json tiedostosta! -----------
             services.AddDbContext<NorthwindOriginalContext>(options => options.UseSqlServer(
-                Configuration.GetConnectionString("paikallinen") // "nwserver22" viittaa nimeen, mik‰ kullekin connection stringille on annettu. Jos/kun tietokanta halutaan vaihtaa, vaihdetaan viittaus appsettings.json tiedostossa!
+                Configuration.GetConnectionString("paikallinen")
                 ));
         }
 
